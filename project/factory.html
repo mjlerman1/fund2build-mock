@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Factory status — Fund2Build</title>
+  <link rel="stylesheet" href="../css/mock.css" />
+</head>
+<body data-root=".." data-screen="S-Project-Factory">
+  <header class="pub">
+    <div class="pub-inner">
+      <a class="logo" href="../trending.html">Fund<span>2</span>Build</a>
+      <nav class="tabs">
+        <a href="../trending.html">Trending</a>
+        <a href="../following.html">Following</a>
+        <a href="../newest.html">Newest</a>
+      </nav>
+      <div class="header-cta"><a class="btn" href="../studio/index.html">Build a proposal</a></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">S-Project-Factory · canned statuses · no SDK</p>
+    <h1 class="page-title">Build / factory</h1>
+    <nav class="proj-nav">
+      <a href="overview.html">Overview</a>
+      <a href="inspect.html">Inspect</a>
+      <a href="pledge.html">Pledge</a>
+      <a class="on" href="factory.html">Build</a>
+      <a href="release.html">Release</a>
+    </nav>
+    <div class="panel" data-factory>
+      <p>Demo switcher (not a live job):</p>
+      <div class="factory-states">
+        <a class="btn secondary" href="#queued">Queued</a>
+        <a class="btn secondary" href="#running">Running</a>
+        <a class="btn secondary" href="#success">Success</a>
+        <a class="btn secondary" href="#abort">Abort</a>
+        <a class="btn ghost" href="factory-locked.html">Pre-gate locked</a>
+      </div>
+      <div data-show="queued">
+        <p class="status-hero">Queued</p>
+        <p>Waiting for a scheduler. Spend $0 / cap $2,400. Inputs frozen.</p>
+      </div>
+      <div data-show="running" hidden>
+        <p class="status-hero">Running</p>
+        <p>Building/testing a web app in controlled boundaries. Spend $610 / cap $2,400. No raw exploit logs.</p>
+      </div>
+      <div data-show="success" hidden>
+        <p class="status-hero">Succeeded</p>
+        <p>Tests passed. Awaiting post-build safety then <a href="release-live.html">Release</a>. Spend $1,880 / cap $2,400.</p>
+      </div>
+      <div data-show="abort" hidden>
+        <p class="status-hero">Aborted</p>
+        <p>Run stopped (cap, boundary, or operator kill). Deploy did not proceed. Spend vs cap shown; refund policy still open (Q-BUD-3).</p>
+      </div>
+    </div>
+  </main>
+  <script src="../js/mock.js"></script>
+  <script>
+    window.addEventListener("hashchange", function () { location.reload(); });
+  </script>
+</body>
+</html>

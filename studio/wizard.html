@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit wizard — Studio</title>
+  <link rel="stylesheet" href="../css/mock.css" />
+</head>
+<body class="studio-bg" data-root=".." data-screen="S-Studio-Submit-Wizard">
+  <header class="stu">
+    <div class="stu-inner">
+      <a class="logo" href="index.html">Studio</a>
+      <nav class="tabs">
+        <a href="index.html">Home</a>
+        <a href="examples.html">Examples</a>
+        <a href="drafts.html">Drafts</a>
+        <a href="pipeline.html">Pipeline</a>
+        <a href="maintain.html">Live</a>
+      </nav>
+      <a class="exit" href="../trending.html">Exit to discovery</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">S-Studio-Submit-Wizard</p>
+    <h1 class="page-title">Submit a proposal</h1>
+    <p class="lede" id="gate-note"></p>
+    <div class="steps">
+      <span class="on">1 Basics</span>
+      <span>2 Requirements</span>
+      <span>3 Mocks</span>
+      <span>4 Runtime (web)</span>
+      <span>5 License intent</span>
+      <span>6 Policy</span>
+    </div>
+    <div class="grid-2">
+      <form class="panel stack">
+        <label>Title</label>
+        <input value="Bike club roster" />
+        <label>Problem</label>
+        <textarea rows="3">Club officers can’t see who paid dues vs who rides Thursday.</textarea>
+        <label>Intended users</label>
+        <input value="A local 20-person cycling club" />
+        <p><button class="btn secondary" type="button">Save draft</button>
+           <a class="btn teal" href="pipeline.html" id="submit">Submit snapshot</a></p>
+        <p class="lede">Incomplete cannot submit. Compare to <a href="examples.html">example</a> per step.</p>
+      </form>
+      <aside class="panel">
+        <h3>Compare to example</h3>
+        <p>A sufficient upload names users, a bounded web-app scope, and at least one mock. Runtime is locked to web app (D13).</p>
+      </aside>
+    </div>
+  </main>
+  <script src="../js/mock.js"></script>
+  <script>
+    if (!F2B.seenExamples()) {
+      location.replace("examples.html?next=wizard.html");
+    } else {
+      document.getElementById("gate-note").textContent = "Examples reviewed this session — submit enabled.";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Examples — Studio</title>
+  <link rel="stylesheet" href="../css/mock.css" />
+</head>
+<body class="studio-bg" data-root=".." data-screen="S-Studio-Examples">
+  <header class="stu">
+    <div class="stu-inner">
+      <a class="logo" href="index.html">Studio</a>
+      <nav class="tabs">
+        <a href="index.html">Home</a>
+        <a class="on" href="examples.html">Examples</a>
+        <a href="drafts.html">Drafts</a>
+        <a href="pipeline.html">Pipeline</a>
+        <a href="maintain.html">Live</a>
+      </nav>
+      <a class="exit" href="../trending.html">Exit to discovery</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">S-Studio-Examples · required before first submit (D17)</p>
+    <h1 class="page-title">A sufficient upload</h1>
+    <p class="lede">This exemplar would be allowed to enter the pipeline. Factory logs are not shown here.</p>
+    <div class="panel">
+      <h2>Example: “Shared chore wheel”</h2>
+      <p><strong>Problem.</strong> A household forgets whose night it is to cook.</p>
+      <p><strong>Users.</strong> 2–5 people in one home.</p>
+      <p><strong>Requirements.</strong> Rotate a weekly wheel; mark done; no third-party social login; web app; print view.</p>
+      <p><strong>Mocks.</strong> Two screens (wheel + history). Runtime locked to web app. OSS intent stated.</p>
+      <p><strong>Why it passes the bar.</strong> Complete problem/users/requirements, ≥1 mock, in-category personal software, factory-fit size, no disallowed capability claims.</p>
+      <div class="gallery">
+        <div class="fake-ui">Mock: chore wheel</div>
+        <div class="fake-ui">Mock: history</div>
+      </div>
+      <p><button class="btn teal" type="button" id="continue">I’ve reviewed these examples — start a proposal</button></p>
+    </div>
+  </main>
+  <script src="../js/mock.js"></script>
+  <script>
+    document.getElementById("continue").onclick = function () { F2B.continueFromExamples(); };
+  </script>
+</body>
+</html>

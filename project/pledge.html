@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PantryLoop — Pledge</title>
+  <link rel="stylesheet" href="../css/mock.css" />
+</head>
+<body data-root=".." data-screen="S-Project-Pledge">
+  <header class="pub">
+    <div class="pub-inner">
+      <a class="logo" href="../trending.html">Fund<span>2</span>Build</a>
+      <nav class="tabs">
+        <a href="../trending.html">Trending</a>
+        <a href="../following.html">Following</a>
+        <a href="../newest.html">Newest</a>
+      </nav>
+      <div class="header-cta"><a class="btn" href="../studio/index.html">Build a proposal</a></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">S-Project-Pledge · Kickstarter-style · not a bounty</p>
+    <h1 class="page-title">Pledge to unlock PantryLoop’s factory run</h1>
+    <nav class="proj-nav">
+      <a href="overview.html">Overview</a>
+      <a href="inspect.html">Inspect</a>
+      <a class="on" href="pledge.html">Pledge</a>
+      <a href="factory.html">Build</a>
+      <a href="release.html">Release</a>
+    </nav>
+    <div class="grid-2">
+      <div class="panel">
+        <form class="stack" action="pledge.html">
+          <label>Amount (USD, mock)</label>
+          <input type="number" value="25" min="1" />
+          <p>Pays prototype + factory token/infra from the backing pool. Does not hire competing solvers.</p>
+          <p><button class="btn accent" type="button">Record pledge (no payment)</button></p>
+        </form>
+        <div class="notice hold">Overfunding does not raise the factory spend cap. If this campaign later exceeds 100%, surplus is <strong>held — split TBD</strong> (Q-FUN-6 open).</div>
+        <p><a href="pledge-goal.html">See goal-met / overpledge state (YardSwap)</a></p>
+      </div>
+      <aside class="panel">
+        <div class="meter">
+          <label><span>Unlock target</span><span>64%</span></label>
+          <div class="bar"><span style="width:64%"></span></div>
+        </div>
+        <p>Cap <strong>$2,400</strong> stays even if pledges overshoot.</p>
+        <p class="lede">Cannot pledge if SafetyBlocked or unlisted. <a href="../unavailable.html">Example unavailable project</a></p>
+      </aside>
+    </div>
+  </main>
+  <script src="../js/mock.js"></script>
+</body>
+</html>

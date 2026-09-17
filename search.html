@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Search — Fund2Build</title>
+  <link rel="stylesheet" href="css/mock.css" />
+</head>
+<body data-root="." data-screen="S-Search-Results">
+  <header class="pub">
+    <div class="pub-inner">
+      <a class="logo" href="trending.html">Fund<span>2</span>Build</a>
+      <nav class="tabs">
+        <a href="trending.html">Trending</a>
+        <a href="following.html">Following</a>
+        <a href="newest.html">Newest</a>
+      </nav>
+      <form class="search" action="search.html"><input name="q" placeholder="Search projects" value="pantry" /></form>
+      <div class="header-cta">
+        <a class="btn" href="studio/index.html">Build a proposal</a>
+        <a class="btn secondary" href="auth.html">Sign in</a>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">S-Search-Results</p>
+    <h1 class="page-title">Results for “pantry”</h1>
+    <p class="lede">Filters (assumed): runtime = web app, safety = cleared. Blocked projects excluded.</p>
+    <section class="feed">
+      <article class="card">
+        <div class="rank">·</div>
+        <div class="thumb">PANTRY</div>
+        <div>
+          <h3><a href="project/overview.html">PantryLoop</a></h3>
+          <p class="tagline">Family leftover matcher.</p>
+          <p class="meta"><span class="chip ok">Safety cleared</span></p>
+        </div>
+        <div class="card-acts">
+          <div class="two-nums">64% pledged</div>
+          <a class="btn secondary" href="project/inspect.html">Try prototype</a>
+        </div>
+      </article>
+    </section>
+    <p class="lede" style="margin-top:2rem"><a href="search-empty.html">No-results state</a></p>
+  </main>
+  <script src="js/mock.js"></script>
+</body>
+</html>
