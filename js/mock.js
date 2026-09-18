@@ -4,7 +4,7 @@
 
   const CAPTIONS = {
     "S-Get-Started": "This is a clickable preview. Nothing here charges a card, and the factory is pretend.",
-    "S-Home-Trending": "The public feed — browse personal software ideas, like a product site.",
+    "S-Home-Top": "All-time is the lifetime shelf. Sort by upvotes or dollars — Trending stays a separate heat feed.",
     "S-Project-Overview": "A project page: the idea, who it’s for, and how close it is to being built.",
     "S-Project-Inspect": "Anyone can try the prototype. This is a preview, not the finished app.",
     "S-Project-Pledge": "A pledge backs the build. Extra pledges do not raise the spending cap.",
@@ -66,13 +66,18 @@
   const screen = document.body.getAttribute("data-screen");
   if (screen !== "S-Get-Started" && !touring) demoBanner();
 
-  document.querySelectorAll("[data-factory]").forEach(function (el) {
-    const st = F2B.factoryState();
-    el.querySelectorAll("[data-show]").forEach(function (node) {
-      node.hidden = node.getAttribute("data-show") !== st;
-    });
-    el.querySelectorAll("a[href^='#']").forEach(function (a) {
-      if (a.getAttribute("href") === "#" + st) a.classList.add("on");
+  document.querySelectorAll(".sort-toggle button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const sort = btn.getAttribute("data-sort");
+      document.querySelectorAll(".sort-toggle button").forEach(function (b) {
+        b.classList.toggle("on", b === btn);
+      });
+      const up = document.getElementById("sort-upvotes");
+      const dol = document.getElementById("sort-dollars");
+      if (up && dol) {
+        up.hidden = sort !== "upvotes";
+        dol.hidden = sort !== "dollars";
+      }
     });
   });
 })();

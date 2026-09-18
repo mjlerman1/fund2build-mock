@@ -126,6 +126,23 @@ header.stu .logo span { color: #5eead4; }
   color: var(--muted);
   margin: 0 0 0.65rem;
 }
+.sort-toggle {
+  display: flex;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+}
+.sort-toggle button {
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.sort-toggle button.on {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
 
 .feed { display: flex; flex-direction: column; gap: 0; }
 .card {
