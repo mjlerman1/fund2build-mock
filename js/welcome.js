@@ -1,5 +1,6 @@
 (function () {
   if (localStorage.getItem("f2b_welcome") === "1") return;
+  if (/\bnowelcome\b/.test(location.search)) return;
   if (document.getElementById("f2b-welcome")) return;
 
   var css = document.createElement("style");
