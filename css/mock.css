@@ -134,7 +134,7 @@ header.stu .logo span { color: #5eead4; }
   font-weight: 800; color: #9a3412; font-size: 0.75rem;
 }
 .thumb.b { background: linear-gradient(135deg, #a7f3d0, #6ee7b7); color: #065f46; }
-.thumb.c { background: linear-gradient(135deg, #bfdbfe, #93c5fd); color: #1e3a8a; }
+.thumb.d { background: linear-gradient(135deg, #e7e5e4, #d6d3d1); color: #44403c; }
 .card h3 { margin: 0 0 0.15rem; font-size: 1.05rem; }
 .tagline { margin: 0; color: var(--muted); font-size: 0.9rem; }
 .meta { margin: 0.35rem 0 0; font-size: 0.8rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.55rem; }
@@ -201,10 +201,17 @@ header.stu .logo span { color: #5eead4; }
 .panel h2, .panel h3 { margin-top: 0; }
 .meter { margin: 0.6rem 0 1rem; }
 .meter label { display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; }
-.bar { height: 8px; background: #e7e5e4; border-radius: 99px; overflow: hidden; margin-top: 0.3rem; }
+.bar { height: 8px; width: 100%; background: #e7e5e4; border-radius: 99px; overflow: hidden; margin-top: 0.3rem; }
 .bar > span { display: block; height: 100%; background: var(--accent); }
 .bar.teal > span { background: var(--accent-2); }
 .bar.ok > span { background: var(--ok); }
+.marks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
 .notice {
   border-radius: 8px;
   padding: 0.75rem 0.9rem;
@@ -305,6 +312,42 @@ body.tour-on .kicker { display: none; }
   box-shadow: var(--shadow);
   pointer-events: none;
 }
+
+body.welcome-lock { overflow: hidden; }
+#f2b-welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(28, 25, 23, 0.55);
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+}
+.welcome-card {
+  background: #fff;
+  max-width: 28rem;
+  padding: 1.6rem 1.5rem 1.35rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+.welcome-kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.welcome-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+.welcome-card p { margin: 0 0 1rem; color: var(--muted); line-height: 1.45; }
+.welcome-actions { margin: 0 !important; }
+.welcome-actions .btn { width: 100%; border: 0; cursor: pointer; font: inherit; }
 
 body.get-started {
   min-height: 100vh;

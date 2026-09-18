@@ -34,7 +34,8 @@
         <a class="btn secondary" href="#queued">Queued</a>
         <a class="btn secondary" href="#running">Running</a>
         <a class="btn secondary" href="#success">Success</a>
-        <a class="btn secondary" href="#abort">Abort</a>
+        <a class="btn secondary" href="#abort">Abort (cap)</a>
+        <a class="btn secondary" href="#fail">Fail (opex retry)</a>
         <a class="btn ghost" href="factory-locked.html">Pre-gate locked</a>
       </div>
       <div data-show="queued">
@@ -50,8 +51,12 @@
         <p>Tests passed. Awaiting post-build safety then <a href="release-live.html">Release</a>. Spend $1,880 / cap $2,400.</p>
       </div>
       <div data-show="abort" hidden>
-        <p class="status-hero">Aborted</p>
-        <p>Run stopped (cap, boundary, or operator kill). Deploy did not proceed. Spend vs cap shown; refund policy still open (Q-BUD-3).</p>
+        <p class="status-hero">Aborted (cap)</p>
+        <p>Hit the factory spend cap after bounded retries. Deploy did not proceed. <strong>Not a backer refund</strong> — leftover factory budget stays unused. Creator may open a new round.</p>
+      </div>
+      <div data-show="fail" hidden>
+        <p class="status-hero">Failed — platform is fixing it</p>
+        <p>Build broke. This is a <strong>platform expense</strong>: same frozen packet, retry 2 of 3. Backers are not refunded for a factory fail. Safety blocks are the refund path.</p>
       </div>
     </div>
   </main>

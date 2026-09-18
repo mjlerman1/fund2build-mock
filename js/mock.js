@@ -58,7 +58,7 @@
     },
     factoryState: function () {
       const h = (location.hash || "#queued").slice(1);
-      return ["queued", "running", "success", "abort"].indexOf(h) >= 0 ? h : "queued";
+      return ["queued", "running", "success", "abort", "fail"].indexOf(h) >= 0 ? h : "queued";
     },
   };
 

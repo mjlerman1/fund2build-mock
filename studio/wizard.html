@@ -25,28 +25,30 @@
     <h1 class="page-title">Submit a proposal</h1>
     <p class="lede" id="gate-note"></p>
     <div class="steps">
-      <span class="on">1 Basics</span>
-      <span>2 Requirements</span>
-      <span>3 Mocks</span>
-      <span>4 Runtime (web)</span>
-      <span>5 License intent</span>
-      <span>6 Policy</span>
+      <span class="on">1 Packet P1–P3</span>
+      <span>2 Stories + non-goals</span>
+      <span>3 Screens + mocks</span>
+      <span>4 Data + bounds</span>
+      <span>5 Done-when (P11–P12)</span>
+      <span>6 MIT + policy</span>
     </div>
     <div class="grid-2">
       <form class="panel stack">
-        <label>Title</label>
-        <input value="Bike club roster" />
-        <label>Problem</label>
-        <textarea rows="3">Club officers can’t see who paid dues vs who rides Thursday.</textarea>
-        <label>Intended users</label>
+        <label>P1 One-liner (≤120)</label>
+        <input value="Bike club roster so officers know who paid and who rides." />
+        <label>P2 Who it’s for</label>
         <input value="A local 20-person cycling club" />
+        <label>P3 Problem / today</label>
+        <textarea rows="3">Club officers can’t see who paid dues vs who rides Thursday.</textarea>
+        <label>P4 Must-have stories (3–7)</label>
+        <textarea rows="3">Given an officer, when they open Thursday, then they see paid vs unpaid riders.</textarea>
         <p><button class="btn secondary" type="button">Save draft</button>
            <a class="btn teal" href="pipeline.html" id="submit">Submit snapshot</a></p>
-        <p class="lede">Incomplete cannot submit. Compare to <a href="examples.html">example</a> per step.</p>
+        <p class="lede">Structured packet required (not a free-text novel). Only the creator submits. Runtime locked to web app. License defaults to MIT.</p>
       </form>
       <aside class="panel">
         <h3>Compare to example</h3>
-        <p>A sufficient upload names users, a bounded web-app scope, and at least one mock. Runtime is locked to web app (D13).</p>
+        <p>A sufficient upload fills P1–P12: users, bounded web-app scope, non-goals, named screens, generated mocks after funding, and checkable “done when.” Similar OSS is allowed — not an auto-reject.</p>
       </aside>
     </div>
   </main>
