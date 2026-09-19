@@ -27,11 +27,16 @@
   <main class="wrap">
     <p class="kicker">S-Home-Trending · signed-in default is still this feed</p>
     <h1 class="page-title">Trending personal software</h1>
-    <p class="lede">Heat in the last 7 days (new ▲ + pledging accounts + just-listed). Released stays if still hot. Lifetime ▲ and $ live on <a href="top.html">All-time</a>.</p>
+    <p class="lede">Heat in the last 7 days. Released stays if still hot. Hosted <strong>Down</strong> can trend (chip on); <strong>HostStopped</strong> cannot — that lives on <a href="top.html">All-time</a>.</p>
     <p style="margin:-0.5rem 0 1rem;font-size:0.85rem"><a href="empty.html">View empty network state</a> · <a href="glossary.html">Safety badges</a> · <a href="screens.html">All S-* screens</a></p>
     <p class="feed-date">Friday, September 18</p>
-    <section class="feed">
-      <article class="card">
+    <div class="sort-toggle" role="group" aria-label="Listing type filter">
+      <button type="button" class="on" data-kind="all">All</button>
+      <button type="button" data-kind="oss">Open source</button>
+      <button type="button" data-kind="hosted">Hosted</button>
+    </div>
+    <section class="feed" id="feed-filter">
+      <article class="card" data-kind="oss">
         <div class="vote">
           <button class="upvote" type="button" title="One upvote per account. Not a pledge. No downvote.">▲<span class="n">12</span><small>not money</small></button>
           <div class="rank">1</div>
@@ -52,12 +57,12 @@
           <a class="btn secondary" href="project/overview-idea.html">Overview</a>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-kind="oss">
         <div class="vote">
           <button class="upvote" type="button" title="One upvote per account. Not a pledge. No downvote.">▲<span class="n">128</span><small>not money</small></button>
           <div class="rank">2</div>
         </div>
-        <div class="thumb">PANTRY</div>
+        <div class="thumb">PANTRY<button class="pitch" type="button" title="~30s elevator pitch (D24) — mock, no video">▶ 0:30</button></div>
         <div>
           <h3><a href="project/overview.html">PantryLoop</a></h3>
           <p class="tagline">Family leftover matcher that plans meals from what’s already in the fridge.</p>
@@ -73,12 +78,12 @@
           <a class="btn secondary" href="project/inspect.html">Try prototype</a>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-kind="oss">
         <div class="vote">
           <button class="upvote" type="button" title="One upvote per account. Not a pledge. No downvote.">▲<span class="n">86</span><small>not money</small></button>
           <div class="rank">3</div>
         </div>
-        <div class="thumb b">YARD</div>
+        <div class="thumb b">YARD<button class="pitch" type="button" title="~30s elevator pitch (D24) — mock, no video">▶ 0:30</button></div>
         <div>
           <h3><a href="project/overview-goal.html">YardSwap</a></h3>
           <p class="tagline">Neighborhood tool library with pickup slots and damage notes.</p>
@@ -94,7 +99,7 @@
           <a class="btn secondary" href="project/inspect-yard.html">Try prototype</a>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-kind="oss">
         <div class="vote">
           <button class="upvote" type="button" title="One upvote per account. Not a pledge. No downvote.">▲<span class="n">54</span><small>not money</small></button>
           <div class="rank">4</div>
@@ -112,6 +117,67 @@
         <div class="card-acts">
           <div class="two-nums">Shipped · was 100%</div>
           <a class="btn secondary" href="project/inspect-recital.html">Try prototype</a>
+        </div>
+      </article>
+      <article class="card" data-kind="hosted">
+        <div class="vote">
+          <button class="upvote" type="button" title="One upvote per account. Not a pledge. No downvote.">▲<span class="n">41</span><small>not money</small></button>
+          <div class="rank">5</div>
+        </div>
+        <div class="thumb">SKY</div>
+        <div>
+          <h3><a href="project/overview-sky.html">SkyDigest</a></h3>
+          <p class="tagline">Weather brief before you ride — hosted comparison (author-set perks).</p>
+          <p class="meta">
+            <span>Sam Ortiz</span>
+            <span class="chip paid">Hosted</span>
+            <span>Listed</span>
+          </p>
+        </div>
+        <div class="card-acts">
+          <div class="bar"><span style="width:31%"></span></div>
+          <div class="marks"><span>Est.</span><span>Mocks</span><span>Proto</span><span>Factory</span></div>
+          <a class="btn secondary" href="project/pledge-sky.html">See tiers</a>
+        </div>
+      </article>
+      <article class="card" data-kind="hosted">
+        <div class="vote">
+          <button class="upvote" type="button" title="One upvote per account. Not a pledge. No downvote.">▲<span class="n">33</span><small>not money</small></button>
+          <div class="rank">6</div>
+        </div>
+        <div class="thumb b">LANTERN</div>
+        <div>
+          <h3><a href="project/release-sky.html#down">RouteLantern</a></h3>
+          <p class="tagline">Harbor fog alerts — official host is Down (still hot, so still here).</p>
+          <p class="meta">
+            <span>Sam Ortiz</span>
+            <span class="chip paid">Hosted</span>
+            <span class="chip bad">Down</span>
+          </p>
+        </div>
+        <div class="card-acts">
+          <div class="two-nums">Released · seat drip paused</div>
+          <a class="btn secondary" href="project/release-sky.html#down">View</a>
+        </div>
+      </article>
+      <article class="card" data-kind="hosted">
+        <div class="vote">
+          <button class="upvote" type="button" title="One upvote per account. Not a pledge. No downvote.">▲<span class="n">19</span><small>not money</small></button>
+          <div class="rank">7</div>
+        </div>
+        <div class="thumb c">KIT</div>
+        <div>
+          <h3><a href="project/release-sky.html#awaiting">KitLedger</a></h3>
+          <p class="tagline">Factory done. Official host not up yet — drip has not started.</p>
+          <p class="meta">
+            <span>Sam Ortiz</span>
+            <span class="chip paid">Hosted</span>
+            <span class="chip warn">Awaiting host</span>
+          </p>
+        </div>
+        <div class="card-acts">
+          <div class="two-nums">G from factory · day 4 of 14</div>
+          <a class="btn secondary" href="project/release-sky.html#awaiting">View</a>
         </div>
       </article>
     </section>

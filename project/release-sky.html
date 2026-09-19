@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkyDigest — Released (hosted)</title>
+  <link rel="stylesheet" href="../css/mock.css" />
+</head>
+<body data-root=".." data-screen="S-Project-Release">
+  <header class="pub">
+    <div class="pub-inner">
+      <a class="logo" href="../index.html">Fund<span>2</span>Build</a>
+      <nav class="tabs">
+        <a href="../index.html">Trending</a>
+        <a href="../following.html">Following</a>
+        <a href="../newest.html">Newest</a>
+        <a href="../top.html">All-time</a>
+      </nav>
+      <div class="header-cta"><a class="btn" href="../studio/index.html">Build a proposal</a></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">S-Project-Release · hosted · D64 / D68–D72</p>
+    <h1 class="page-title">SkyDigest <span class="chip paid">Hosted</span> <span class="chip ok" id="health">Live</span></h1>
+    <p class="lede">Released as <strong>public MIT source</strong> plus Sam’s official instance. A seat is a <strong>prepaid first term</strong>. Anyone may <strong>self-host</strong>.</p>
+    <nav class="proj-nav">
+      <a href="overview-sky.html">Overview</a>
+      <span class="btn secondary disabled">Inspect</span>
+      <a href="pledge-sky.html">Pledge</a>
+      <a href="factory.html#success">Build</a>
+      <a class="on" href="release-sky.html">Release</a>
+    </nav>
+    <p class="lede">Toggle: <a href="#live">Live</a> · <a href="#degraded">Degraded</a> · <a href="#down">Down (day 9 of G=14)</a> · <a href="#awaiting">Awaiting host</a> · <a href="#stopped">HostStopped</a> · <a href="#missed">Missed go-live → OSS</a></p>
+    <div class="grid-2">
+      <div class="panel">
+        <h2>Two doors</h2>
+        <p><a class="btn accent" id="open-official" href="#">Open on official host (Sam)</a>
+           <a class="btn secondary" href="#">Self-host — public repo</a></p>
+        <p class="lede"><a href="#">Factory preview (ungated demo, not the official instance)</a></p>
+        <p class="lede">Backers sign in with their Fund2Build account. The factory output already includes the seat check. Preview is ungated.</p>
+        <div class="notice hold" data-show="awaiting" hidden>
+          <strong>Awaiting official host.</strong> Factory succeeded. Drip and term have not started. Sam has <strong>14 days</strong> from factory success to go live. Card CTA is View, not Open. <a href="../studio/go-live.html">Studio go-live</a>
+        </div>
+        <div class="notice lock" data-show="down" hidden>
+          <strong>Down for 9 days.</strong> Sam notified on day 1. Seat drip is paused; term clock frozen. If still Down at day <strong>14</strong>, un-dripped seat money refunds pro-rata. Self-host stays available.
+        </div>
+        <div class="notice hold" data-show="degraded" hidden>
+          <strong>Degraded.</strong> Health checks partially failing. No refund clock yet; drip continues.
+        </div>
+        <div class="notice bad" data-show="stopped" hidden>
+          <strong>Host stopped.</strong> Un-dripped seat money refunded. Not on Trending. Self-host or <a href="lineage.html">fund a new version</a>.
+        </div>
+        <div class="notice info" data-show="missed" hidden>
+          <strong>Missed go-live.</strong> No Live ping within 14 days of factory. Entire seat slice refunded. This listing is now ordinary <strong>OSS Released</strong> — Hosted chip dropped. No late resurrection. Build money already spent.
+        </div>
+      </div>
+      <aside class="panel">
+        <h3>Your seat (mock backer)</h3>
+        <p><strong>12 months hosted</strong> · month 4 of 12</p>
+        <div class="meter">
+          <label><span>Seat money released to Sam</span><span>4 / 12</span></label>
+          <div class="bar teal"><span style="width:33%"></span></div>
+        </div>
+        <p class="lede">8 months un-dripped. Refundable to you if hosting stops. Pauses while Down.</p>
+        <h3 style="margin-top:1.2rem">Post-launch</h3>
+        <p class="lede">The only pledge now is <a href="lineage.html">fund a new version</a>. Buying a seat later happens on Sam’s instance, not here (v1).</p>
+        <p class="lede">Compare plain OSS release: <a href="release-live.html">RecitalBoard</a>.</p>
+      </aside>
+    </div>
+  </main>
+  <script src="../js/mock.js"></script>
+  <script>
+    (function () {
+      var chip = document.getElementById("health");
+      function apply() {
+        var h = (location.hash || "#live").slice(1);
+        var map = {
+          live: ["Live", "chip ok"],
+          degraded: ["Degraded", "chip warn"],
+          down: ["Down", "chip bad"],
+          awaiting: ["Awaiting host", "chip warn"],
+          stopped: ["HostStopped", "chip bad"],
+          missed: ["OSS Released", "chip"]
+        };
+        var m = map[h] || map.live;
+        chip.textContent = m[0];
+        chip.className = m[1];
+        document.querySelectorAll("[data-show]").forEach(function (n) {
+          n.hidden = n.getAttribute("data-show") !== h;
+        });
+        var open = document.getElementById("open-official");
+        if (open) open.hidden = h === "awaiting" || h === "stopped" || h === "missed";
+      }
+      window.addEventListener("hashchange", apply);
+      apply();
+    })();
+  </script>
+</body>
+</html>

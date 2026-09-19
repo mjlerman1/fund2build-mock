@@ -172,6 +172,21 @@ header.stu .logo span { color: #5eead4; }
 .thumb.b { background: linear-gradient(135deg, #7ddec0, #05ce78); color: #042f1e; }
 .thumb.c { background: linear-gradient(135deg, #c4b5fd, #6d28d9); color: #fff; }
 .thumb.d { background: linear-gradient(135deg, #d6d3d1, #78716c); color: #fff; }
+.thumb { position: relative; }
+.pitch {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  background: rgba(20, 20, 20, 0.75);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  letter-spacing: 0;
+}
+.pitch:hover { background: var(--accent); }
 .card h3 { margin: 0 0 0.15rem; font-size: 1.05rem; }
 .tagline { margin: 0; color: var(--muted); font-size: 0.9rem; }
 .meta { margin: 0.35rem 0 0; font-size: 0.8rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.55rem; }

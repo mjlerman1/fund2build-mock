@@ -66,10 +66,20 @@
   const screen = document.body.getAttribute("data-screen");
   if (screen !== "S-Get-Started" && !touring) demoBanner();
 
-  document.querySelectorAll(".sort-toggle button").forEach(function (btn) {
+  document.querySelectorAll("[data-factory]").forEach(function (el) {
+    const st = F2B.factoryState();
+    el.querySelectorAll("[data-show]").forEach(function (node) {
+      node.hidden = node.getAttribute("data-show") !== st;
+    });
+    el.querySelectorAll("a[href^='#']").forEach(function (a) {
+      if (a.getAttribute("href") === "#" + st) a.classList.add("on");
+    });
+  });
+
+  document.querySelectorAll(".sort-toggle button[data-sort]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       const sort = btn.getAttribute("data-sort");
-      document.querySelectorAll(".sort-toggle button").forEach(function (b) {
+      document.querySelectorAll(".sort-toggle button[data-sort]").forEach(function (b) {
         b.classList.toggle("on", b === btn);
       });
       const up = document.getElementById("sort-upvotes");
@@ -78,6 +88,26 @@
         up.hidden = sort !== "upvotes";
         dol.hidden = sort !== "dollars";
       }
+    });
+  });
+
+  document.querySelectorAll(".sort-toggle button[data-kind]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const kind = btn.getAttribute("data-kind");
+      document.querySelectorAll(".sort-toggle button[data-kind]").forEach(function (b) {
+        b.classList.toggle("on", b === btn);
+      });
+      document.querySelectorAll(".card[data-kind]").forEach(function (card) {
+        card.hidden = kind !== "all" && card.getAttribute("data-kind") !== kind;
+      });
+    });
+  });
+
+  document.querySelectorAll(".pitch").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      alert("~30s elevator pitch (D24). Mock only — no video in the spec demo. Public-facing; not part of the factory packet.");
     });
   });
 })();
