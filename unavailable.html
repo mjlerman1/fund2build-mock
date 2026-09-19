@@ -5,28 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Unavailable — Fund2Build</title>
   <link rel="stylesheet" href="css/mock.css" />
+  
 </head>
-<body data-root="." data-screen="S-Project-Blocked-Public">
-  <header class="pub">
-    <div class="pub-inner">
+<body data-root="." data-screen="unavailable">
+<a class="skip" href="#main">Skip to content</a>
+<header class="pub">
+  <div class="pub-inner">
+    <nav aria-label="Primary">
       <a class="logo" href="index.html">Fund<span>2</span>Build</a>
-      <nav class="tabs">
-        <a href="index.html">Trending</a>
-        <a href="following.html">Following</a>
-        <a href="newest.html">Newest</a>
-        <a href="top.html">All-time</a>
-      </nav>
-      <div class="header-cta"><a class="btn" href="studio/index.html">Build a proposal</a></div>
+    </nav>
+    <form class="search" action="search.html" role="search">
+      <input name="q" placeholder="Search personal software…" aria-label="Search personal software" />
+    </form>
+    <button class="search-toggle" type="button" data-search-toggle aria-expanded="false" aria-label="Search">🔍</button>
+    <div class="header-cta">
+      <a class="btn" href="editor.html" aria-label="Start a project">Start<span class="wide-only"> a project</span></a>
+      <a class="btn secondary" href="auth.html" data-signedout>Sign in</a>
+      <button class="avatar-btn" type="button" data-you-menu data-signedin aria-expanded="false" aria-haspopup="true" aria-label="You">You</button>
     </div>
-  </header>
-  <main class="wrap">
-    <p class="kicker">S-Project-Blocked-Public</p>
-    <div class="empty">
-      <h1>This project isn’t available</h1>
-      <p>It isn’t listed for inspect or pledges. No further detail on this public page.</p>
-      <p><a class="btn secondary" href="index.html">Back to Trending</a></p>
+    <div id="you-menu" class="you-menu" hidden data-signedin>
+      <a href="you.html">Backed</a>
+      <a href="you.html?tab=following">Following</a>
+      <a href="you.html?tab=projects">Your projects</a>
+      <a href="you.html?tab=notifications">Notifications</a>
+      <a href="you.html?tab=settings">Settings</a>
+      <a href="help.html">Help</a>
     </div>
-  </main>
-  <script src="js/mock.js"></script>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <div class="empty">
+    <h1>This project isn't available.</h1>
+    <p>It may have been removed or never listed.</p>
+    <p><a href="index.html">← Home</a></p>
+  </div>
+</main>
+
+<footer class="footer"><a href="help.html">Help</a> · mock v2 · nothing charges a card</footer>
+<script src="js/mock.js?v=4"></script>
+
 </body>
 </html>

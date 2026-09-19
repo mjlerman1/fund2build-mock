@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home — Fund2Build</title>
+  <title>R1 task — Fund2Build</title>
   <link rel="stylesheet" href="css/mock.css" />
   
 </head>
-<body data-root="." data-screen="home.empty">
-<a class="skip" href="#main">Skip to projects</a>
+<body data-root="." data-screen="r1">
+<a class="skip" href="#main">Skip to content</a>
 <header class="pub">
   <div class="pub-inner">
     <nav aria-label="Primary">
@@ -35,11 +35,30 @@
 </header>
 
 <main class="wrap" id="main">
-  <h1 class="page-title">Personal software, funded by the people who want it.</h1>
-  <div class="empty">
-    <h2>Nothing listed yet.</h2>
-    <p><a class="btn" href="editor.html" aria-label="Start a project">Start<span class="wide-only"> a project</span></a></p>
-  </div>
+  <h1 class="page-title">R1 — six-minute task</h1>
+  <p>This is the instrument for the comprehension test. It is not a live study until someone recruits.</p>
+  <ol>
+    <li>Open <a href="index.html">Home</a>.</li>
+    <li>Find PantryLoop. Use <strong>Try it</strong> or <strong>Back it</strong> (first click is the A/B).</li>
+    <li>On the project page, read until you can answer: what would you get / when / if it fails?</li>
+    <li>Open the Back sheet. You do not need to pay (this mock never charges).</li>
+  </ol>
+  <form data-waitlist class="block">
+    <h2>After the task</h2>
+    <p>What would you get if this reaches its goal?</p>
+    <textarea name="get"></textarea>
+    <p>When would you get it?</p>
+    <textarea name="when"></textarea>
+    <p>If it fails?</p>
+    <textarea name="fail"></textarea>
+    <p>Would you put $25 in today? Stated amount
+      <input name="amount" class="amount" value="25" aria-label="Stated amount" /></p>
+    <p>Who else would need to agree?</p>
+    <input name="who" type="text" style="width:100%;min-height:44px" />
+    <p><button class="btn" type="submit">Join waitlist (mock)</button></p>
+    <p data-waitlist-done hidden role="status"></p>
+  </form>
+  <p class="spec-only"><a href="index.html?primary=try">primary=try</a> · <a href="index.html?primary=back">primary=back</a> · <a href="index.html?chip=safety&amp;spec=1">safety chip on</a></p>
 </main>
 
 <footer class="footer"><a href="help.html">Help</a> · mock v2 · nothing charges a card</footer>

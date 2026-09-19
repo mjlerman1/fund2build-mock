@@ -5,47 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Search — Fund2Build</title>
   <link rel="stylesheet" href="css/mock.css" />
+  
 </head>
-<body data-root="." data-screen="S-Search-Results">
-  <header class="pub">
-    <div class="pub-inner">
+<body data-root="." data-screen="search">
+<a class="skip" href="#main">Skip to projects</a>
+<header class="pub">
+  <div class="pub-inner">
+    <nav aria-label="Primary">
       <a class="logo" href="index.html">Fund<span>2</span>Build</a>
-      <nav class="tabs">
-        <a href="index.html">Trending</a>
-        <a href="following.html">Following</a>
-        <a href="newest.html">Newest</a>
-        <a href="top.html">All-time</a>
-      </nav>
-      <form class="search" action="search.html"><input name="q" placeholder="Search projects" value="pantry" /></form>
-      <div class="header-cta">
-        <a class="btn" href="studio/index.html">Build a proposal</a>
-        <a class="btn secondary" href="auth.html">Sign in</a>
-      </div>
+    </nav>
+    <form class="search" action="search.html" role="search">
+      <input name="q" placeholder="Search personal software…" aria-label="Search personal software" />
+    </form>
+    <button class="search-toggle" type="button" data-search-toggle aria-expanded="false" aria-label="Search">🔍</button>
+    <div class="header-cta">
+      <a class="btn" href="editor.html" aria-label="Start a project">Start<span class="wide-only"> a project</span></a>
+      <a class="btn secondary" href="auth.html" data-signedout>Sign in</a>
+      <button class="avatar-btn" type="button" data-you-menu data-signedin aria-expanded="false" aria-haspopup="true" aria-label="You">You</button>
     </div>
-  </header>
-  <main class="wrap">
-    <p class="kicker">S-Search-Results</p>
-    <h1 class="page-title">Results for “pantry”</h1>
-    <p class="lede">Filters (assumed): runtime = web app, safety = cleared. Blocked projects excluded.</p>
-    <section class="feed">
-      <article class="card">
-        <div class="vote">
-          <button class="upvote" type="button" title="One upvote per account. Not a pledge. No downvote.">▲<span class="n">128</span></button>
-        </div>
-        <div class="thumb">PANTRY</div>
-        <div>
-          <h3><a href="project/overview.html">PantryLoop</a></h3>
-          <p class="tagline">Family leftover matcher.</p>
-          <p class="meta"><span class="chip ok">Safety cleared</span></p>
-        </div>
-        <div class="card-acts">
-          <div class="two-nums">64% pledged</div>
-          <a class="btn secondary" href="project/inspect.html">Try prototype</a>
-        </div>
-      </article>
-    </section>
-    <p class="lede" style="margin-top:2rem"><a href="search-empty.html">No-results state</a></p>
-  </main>
-  <script src="js/mock.js"></script>
+    <div id="you-menu" class="you-menu" hidden data-signedin>
+      <a href="you.html">Backed</a>
+      <a href="you.html?tab=following">Following</a>
+      <a href="you.html?tab=projects">Your projects</a>
+      <a href="you.html?tab=notifications">Notifications</a>
+      <a href="you.html?tab=settings">Settings</a>
+      <a href="help.html">Help</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <h1 class="page-title">Search</h1>
+  <form class="search" action="search.html" style="display:flex;margin:0 0 1rem">
+    <input name="q" value="pantry" aria-label="Search personal software" />
+  </form>
+  <div class="feed-controls">
+    <div class="sort-row" role="group" aria-label="Sort">
+      <button type="button" data-sort="hot" aria-pressed="true">Hot</button>
+      <button type="button" data-sort="new" aria-pressed="false">New</button>
+      <button type="button" data-sort="top" aria-pressed="false">Top</button>
+    </div>
+    <div class="type-row spec-only" role="group" aria-label="Type">
+  <button type="button" data-kind="all" aria-pressed="true">All</button>
+  <button type="button" data-kind="oss" aria-pressed="false">Open source</button>
+  <button type="button" data-kind="hosted" aria-pressed="false">Hosted</button>
+</div>
+
+  </div>
+  <ul class="feed"><li>
+<article class="card" data-kind="oss" data-followed="1">
+  <div class="card-top">
+    <div class="thumb " aria-hidden="true">PANTR</div>
+    <div>
+      <h2><a href="project/pantryloop.html">PantryLoop</a></h2>
+    </div>
+    <div class="stage-word">Prototype</div>
+  </div>
+  <p class="tagline">Plans meals from what's already in the fridge.</p>
+  <p class="meta" data-safety-slot>Maya Chen · 41 backers · <button class="upvote" type="button" aria-pressed="false" aria-label="Upvote PantryLoop, 128 upvotes" title="Upvotes help ranking. Backing pays for the build.">▲ 128</button> </p>
+  <div class="bar-row">
+  <div class="bar " role="progressbar" aria-valuemin="0" aria-valuemax="3000" aria-valuenow="1920" aria-label="$1,920 of $3,000 toward the build"><span style="width:64%"></span></div>
+</div>
+<p class="bar-label">$1,920 of $3,000</p>
+  <div class="card-acts" data-primary-swap><a class="btn accent" href="project/pantryloop.html#back">Back it</a><a class="btn secondary" href="project/pantryloop.html#try" data-act="try">Try it</a></div>
+</article>
+</li>
+</ul>
+</main>
+
+<footer class="footer"><a href="help.html">Help</a> · mock v2 · nothing charges a card</footer>
+<script src="js/mock.js?v=4"></script>
+
 </body>
 </html>

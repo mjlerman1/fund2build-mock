@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New project — Fund2Build</title>
+  <link rel="stylesheet" href="css/mock.css" />
+  
+</head>
+<body data-root="." data-screen="editor">
+<a class="skip" href="#main">Skip to content</a>
+<header class="pub">
+  <div class="pub-inner">
+    <nav aria-label="Primary">
+      <a class="logo" href="index.html">Fund<span>2</span>Build</a>
+    </nav>
+    <form class="search" action="search.html" role="search">
+      <input name="q" placeholder="Search personal software…" aria-label="Search personal software" />
+    </form>
+    <button class="search-toggle" type="button" data-search-toggle aria-expanded="false" aria-label="Search">🔍</button>
+    <div class="header-cta">
+      <a class="btn" href="editor.html" aria-label="Start a project">Start<span class="wide-only"> a project</span></a>
+      <a class="btn secondary" href="auth.html" data-signedout>Sign in</a>
+      <button class="avatar-btn" type="button" data-you-menu data-signedin aria-expanded="false" aria-haspopup="true" aria-label="You">You</button>
+    </div>
+    <div id="you-menu" class="you-menu" hidden data-signedin>
+      <a href="you.html">Backed</a>
+      <a href="you.html?tab=following">Following</a>
+      <a href="you.html?tab=projects">Your projects</a>
+      <a href="you.html?tab=notifications">Notifications</a>
+      <a href="you.html?tab=settings">Settings</a>
+      <a href="help.html">Help</a>
+    </div>
+  </div>
+</header>
+
+<header class="edit" style="display:none"></header>
+<main class="wrap" id="main" data-editor data-draft="empty">
+  <p><a href="index.html">← Home</a></p>
+  <p class="notice" data-listed-banner hidden>Changes to a listed project need the build approved again.</p>
+  <div class="edit-grid">
+    <form>
+      <p class="mobile-only">● ○ ○ ○ ○ ○ <span data-check-count>Ready to publish 0/9</span></p>
+      <ol class="progress-dots mobile-only" aria-label="Questions">
+        <li aria-current="step"></li><li></li><li></li><li></li><li></li><li></li>
+      </ol>
+      <details class="mobile-only"><summary>Preview as a card</summary>
+        <div class="preview-card" aria-hidden="true">
+          <strong>New project</strong> · Idea
+          <p data-preview-line>What it does</p>
+          <p>You · 0 backers · ▲ 0</p>
+          <p>$0 of $80</p>
+          <span class="btn">Back it</span>
+        </div>
+      </details>
+      <fieldset class="q">
+  <legend>1 · What it does</legend>
+  <p>One sentence. What does it do for the person using it?</p>
+  <textarea name="q1" id="q1"></textarea>
+  <p><button type="button" class="btn secondary" data-example aria-expanded="false" aria-controls="ex-q1">Show me a good one</button></p>
+  <div id="ex-q1" class="example" hidden>Keeps track of which chores are done, whose turn is next, and reminds whoever's turn it is.</div>
+</fieldset>
+<fieldset class="q">
+  <legend>2 · Who it's for</legend>
+  <p>Who is this for? Just you, your household, or a group you're part of?</p>
+  <textarea name="q2" id="q2"></textarea>
+  <p><button type="button" class="btn secondary" data-example aria-expanded="false" aria-controls="ex-q2">Show me a good one</button></p>
+  <div id="ex-q2" class="example" hidden>Me and my two kids at home</div>
+</fieldset>
+<fieldset class="q">
+  <legend>3 · Must do</legend>
+  <p>What are the 3–7 things it absolutely has to do?</p>
+  <textarea name="q3" id="q3"></textarea>
+  <p><button type="button" class="btn secondary" data-example aria-expanded="false" aria-controls="ex-q3">Show me a good one</button></p>
+  <div id="ex-q3" class="example" hidden>When I mark a chore done, it should move to the next person automatically.</div>
+</fieldset>
+<fieldset class="q">
+  <legend>4 · Must not do</legend>
+  <p>What should this thing definitely not do?</p>
+  <textarea name="q4" id="q4"></textarea>
+  <p><button type="button" class="btn secondary" data-example aria-expanded="false" aria-controls="ex-q4">Show me a good one</button></p>
+  <div id="ex-q4" class="example" hidden>It should not send texts or notifications to anyone outside our household.</div>
+</fieldset>
+<fieldset class="q">
+  <legend>5 · Screens</legend>
+  <p>If you tapped through this on your phone, what are the main screens you'd see? Sketches are drawn later.</p>
+  <textarea name="q5" id="q5"></textarea>
+  <p><button type="button" class="btn secondary" data-example aria-expanded="false" aria-controls="ex-q5">Show me a good one</button></p>
+  <div id="ex-q5" class="example" hidden>This week's schedule. Add a chore. Who's turn is it. Settings.</div>
+</fieldset>
+<fieldset class="q">
+  <legend>6 · Done when</legend>
+  <p>How we'll know it works — plain sentences.</p>
+  <textarea name="q6" id="q6"></textarea>
+  <p><button type="button" class="btn secondary" data-example aria-expanded="false" aria-controls="ex-q6">Show me a good one</button></p>
+  <div id="ex-q6" class="example" hidden>I can add a new chore and assign it to a person.</div>
+</fieldset>
+
+      <div data-hosting-q class="spec-only q">
+        <fieldset>
+          <legend>Will you also run it online for backers?</legend>
+          <label><input type="radio" name="hosting" value="no" checked /> No</label>
+          <label><input type="radio" name="hosting" value="yes" /> Yes</label>
+        </fieldset>
+        <div id="hosting-section" hidden>
+          <p>Hosting section (M7). Monthly cost to you · access options.</p>
+        </div>
+      </div>
+      <p>License: MIT (open source) · Runtime: web app</p>
+      <label><input type="checkbox" name="policy" /> I accept the policy</label>
+      <p>
+        <a href="help.html">Writing help (paid)</a>
+        <button class="btn secondary" type="button">Save</button>
+        <button class="btn" type="button" data-publish disabled>Publish</button>
+      </p>
+    </form>
+    <aside class="check desktop-only">
+      <div class="preview-card" aria-hidden="true">
+        <p><strong>Bike club roster</strong> · Idea</p>
+        <p data-preview-line>What it does</p>
+        <p>You · 0 backers · ▲ 0</p>
+        <p>$0 of $80</p>
+        <span class="btn">Back it</span>
+      </div>
+      <p data-check-count id="check-live" aria-live="polite">Ready to publish 0/9</p>
+      <ul data-check-list></ul>
+      <p>Build budget (fixed): shown when you publish</p>
+    </aside>
+  </div>
+  <p class="spec-only">
+    <a href="editor.html?draft=empty">empty</a> ·
+    <a href="editor.html?draft=partial">6/9</a> ·
+    <a href="editor.html?draft=complete">9/9</a> ·
+    <a href="editor.html?draft=listed">listed-edit</a>
+  </p>
+</main>
+
+<footer class="footer"><a href="help.html">Help</a> · mock v2 · nothing charges a card</footer>
+<script src="js/mock.js?v=4"></script>
+
+</body>
+</html>

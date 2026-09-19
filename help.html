@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help — Fund2Build</title>
+  <link rel="stylesheet" href="css/mock.css" />
+  
+</head>
+<body data-root="." data-screen="help">
+<a class="skip" href="#main">Skip to content</a>
+<header class="pub">
+  <div class="pub-inner">
+    <nav aria-label="Primary">
+      <a class="logo" href="index.html">Fund<span>2</span>Build</a>
+    </nav>
+    <form class="search" action="search.html" role="search">
+      <input name="q" placeholder="Search personal software…" aria-label="Search personal software" />
+    </form>
+    <button class="search-toggle" type="button" data-search-toggle aria-expanded="false" aria-label="Search">🔍</button>
+    <div class="header-cta">
+      <a class="btn" href="editor.html" aria-label="Start a project">Start<span class="wide-only"> a project</span></a>
+      <a class="btn secondary" href="auth.html" data-signedout>Sign in</a>
+      <button class="avatar-btn" type="button" data-you-menu data-signedin aria-expanded="false" aria-haspopup="true" aria-label="You">You</button>
+    </div>
+    <div id="you-menu" class="you-menu" hidden data-signedin>
+      <a href="you.html">Backed</a>
+      <a href="you.html?tab=following">Following</a>
+      <a href="you.html?tab=projects">Your projects</a>
+      <a href="you.html?tab=notifications">Notifications</a>
+      <a href="you.html?tab=settings">Settings</a>
+      <a href="help.html">Help</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <h1 class="page-title">Help</h1>
+  <section class="block" aria-labelledby="h-how">
+    <h2 id="h-how">How it works</h2>
+    <p>People back a written idea. Money pays for sketches, then a prototype, then a build with a fixed budget. When it's ready, everyone can use the app and the code is public.</p>
+  </section>
+  <section class="block" aria-labelledby="h-stage">
+    <h2 id="h-stage">Stage words</h2>
+    <ul>
+      <li><strong>Idea</strong> — written up and checked. Backing pays for sketches next.</li>
+      <li><strong>Sketches</strong> — screens are drawn. Backing pays for a working prototype next.</li>
+      <li><strong>Prototype</strong> — you can click through it. Backing goes toward the build.</li>
+      <li><strong>Funded</strong> — goal reached and the maker approved. The build starts automatically.</li>
+      <li><strong>Building</strong> — being built and tested to a fixed budget.</li>
+      <li><strong>Ready</strong> — built, checked, and yours to use.</li>
+      <li><strong>Paused</strong> — backing is paused while we review.</li>
+      <li><strong>Closed</strong> — this one stopped. A reason line says why.</li>
+    </ul>
+  </section>
+  <section class="block" aria-labelledby="h-money">
+    <h2 id="h-money">How money works</h2>
+    <div class="three" id="money">
+  <dl>
+    <dt>You get</dt>
+    <dd>A web app you can use and share. Free, open source, yours to keep.</dd>
+    <dt>By</dt>
+    <dd>Built to a fixed budget once the goal is reached. Typical build time: a few days.</dd>
+    <dt>If not</dt>
+    <dd>Money for steps that never happen comes back. Steps that were made stay public.</dd>
+  </dl>
+</div>
+
+    <p>We check every idea for safety before it's listed and again before it's released. If our build breaks, we fix it at our cost. Extra money never buys a bigger build.</p>
+  </section>
+  <section class="block" aria-labelledby="h-sort">
+    <h2 id="h-sort">Sort</h2>
+    <p>Hot is recent attention. New is newest listings. Top is lifetime upvotes (toggle $ when Top is on). Ranking does not unlock a build.</p>
+  </section>
+  <section class="block spec-only" id="hosted" aria-labelledby="h-host">
+    <h2 id="h-host">How hosted access works</h2>
+    <p>The maker is paid month by month while the site is online. Offline 14 days, or never online → unused months refunded.</p>
+  </section>
+</main>
+
+<footer class="footer"><a href="help.html">Help</a> · mock v2 · nothing charges a card</footer>
+<script src="js/mock.js?v=4"></script>
+
+</body>
+</html>

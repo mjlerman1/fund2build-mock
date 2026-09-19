@@ -3,81 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Screen map — Fund2Build mock</title>
+  <title>Fixture map — Fund2Build</title>
   <link rel="stylesheet" href="css/mock.css" />
+  
 </head>
-<body data-root=".">
-  <header class="pub">
-    <div class="pub-inner">
+<body data-root="." data-screen="screens">
+<a class="skip" href="#main">Skip to content</a>
+<header class="pub">
+  <div class="pub-inner">
+    <nav aria-label="Primary">
       <a class="logo" href="index.html">Fund<span>2</span>Build</a>
-      <div class="header-cta"><a class="btn" href="studio/index.html">Build a proposal</a></div>
+    </nav>
+    <form class="search" action="search.html" role="search">
+      <input name="q" placeholder="Search personal software…" aria-label="Search personal software" />
+    </form>
+    <button class="search-toggle" type="button" data-search-toggle aria-expanded="false" aria-label="Search">🔍</button>
+    <div class="header-cta">
+      <a class="btn" href="editor.html" aria-label="Start a project">Start<span class="wide-only"> a project</span></a>
+      <a class="btn secondary" href="auth.html" data-signedout>Sign in</a>
+      <button class="avatar-btn" type="button" data-you-menu data-signedin aria-expanded="false" aria-haspopup="true" aria-label="You">You</button>
     </div>
-  </header>
-  <main class="wrap">
-    <p class="kicker">Spec demo index of S-* coverage (not a product nav)</p>
-    <h1 class="page-title">HTML screens</h1>
-    <div class="panel">
-      <p><strong>Discovery</strong> —
-        <a href="get-started.html">Get started (archived)</a> ·
-        <a href="index.html">S-Home-Trending</a> ·
-        <a href="empty.html">empty trending</a> ·
-        <a href="following.html">S-Home-Following empty</a> ·
-        <a href="newest.html">S-Home-Newest</a> ·
-        <a href="top.html">S-Home-Top</a> ·
-        <a href="search.html">S-Search-Results</a> ·
-        <a href="search-empty.html">search empty</a>
-      </p>
-      <p><strong>Project</strong> —
-        <a href="project/overview-idea.html">overview idea-stage</a> ·
-        <a href="project/overview.html">S-Project-Overview</a> ·
-        <a href="project/inspect.html">S-Project-Inspect</a> ·
-        <a href="project/pledge.html">S-Project-Pledge</a> ·
-        <a href="project/pledge-sky.html">hosted tiers (SkyDigest)</a> ·
-        <a href="project/pledge-goal.html">pledge goal-met / cap-stays</a> ·
-        <a href="project/factory-locked.html">S-Project-Factory locked</a> ·
-        <a href="project/factory.html#queued">queued</a> /
-        <a href="project/factory.html#running">running</a> /
-        <a href="project/factory.html#success">success</a> /
-        <a href="project/factory.html#abort">abort (cap)</a> /
-        <a href="project/factory.html#fail">fail (opex)</a> ·
-        <a href="project/release.html">S-Project-Release (pre)</a> ·
-        <a href="project/release-live.html">released</a> ·
-        <a href="project/release-sky.html">released hosted</a> ·
-        <a href="project/release-sky.html#awaiting">awaiting host</a> ·
-        <a href="project/release-sky.html#down">hosted Down</a> ·
-        <a href="project/release-sky.html#stopped">HostStopped</a> ·
-        <a href="project/release-sky.html#missed">missed go-live</a> ·
-        <a href="project/lineage.html">S-Project-Lineage</a> ·
-        <a href="unavailable.html">S-Project-Blocked-Public</a> ·
-        <a href="glossary.html">S-Legal-Safety-Glossary</a>
-      </p>
-      <p><strong>Account</strong> —
-        <a href="auth.html">S-Auth</a> ·
-        <a href="me-pledges.html">S-Me-Pledges</a> ·
-        <a href="me-following.html">S-Me-Following</a> ·
-        <a href="me-settings.html">S-Me-Settings</a>
-      </p>
-      <p><strong>Studio</strong> —
-        <a href="studio/index.html">S-Studio-Home</a> ·
-        <a href="studio/examples.html">S-Studio-Examples</a> ·
-        <a href="studio/drafts.html">S-Studio-Draft-List</a> ·
-        <a href="studio/drafts-empty.html">drafts empty</a> ·
-        <a href="studio/wizard.html">S-Studio-Submit-Wizard</a> ·
-        <a href="studio/path.html">OSS vs hosted path</a> ·
-        <a href="studio/go-live.html">hosted go-live (D71)</a> ·
-        <a href="studio/polish.html">S-Studio-Polish (paid, D59/D60)</a> ·
-        <a href="studio/fund-early.html">S-Studio-Fund-Early (self-pledge)</a> ·
-        <a href="studio/pipeline.html">S-Studio-Pipeline</a> ·
-        <a href="studio/revise.html">S-Studio-Revise</a> ·
-        <a href="studio/blocked.html">S-Studio-Blocked</a> ·
-        <a href="studio/commit.html">S-Studio-Commit-Gate</a> ·
-        <a href="studio/commit-locked.html">commit locked</a> ·
-        <a href="studio/overfund.html">S-Studio-Overfund</a> ·
-        <a href="studio/maintain.html">S-Studio-Release-Maintain</a>
-      </p>
-      <p>Not in this mock (D17): S-Ops-Queue, S-Ops-Project-Detail, S-Ops-Kill-Switch.</p>
+    <div id="you-menu" class="you-menu" hidden data-signedin>
+      <a href="you.html">Backed</a>
+      <a href="you.html?tab=following">Following</a>
+      <a href="you.html?tab=projects">Your projects</a>
+      <a href="you.html?tab=notifications">Notifications</a>
+      <a href="you.html?tab=settings">Settings</a>
+      <a href="help.html">Help</a>
     </div>
-  </main>
-  <script src="js/mock.js"></script>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <h1 class="page-title">Fixture map</h1>
+  <p class="spec-only">Visible with ?spec=1. Public surfaces hide this.</p>
+  <ul>
+    <li><a href="index.html">home</a> · <a href="empty.html">home.empty</a></li>
+    <li><a href="project/spokeroster.html">spokeroster.idea</a> · <a href="project/spokeroster-closed.html">closed-expired</a></li>
+    <li><a href="project/pantryloop-sketches.html">pantryloop.sketches</a> · <a href="project/pantryloop.html">prototype</a> · <a href="project/pantryloop-paused.html">paused</a> · <a href="project/pantryloop-over.html">back-sheet.over</a></li>
+    <li><a href="project/yardswap-funded.html">yardswap.funded</a> · <a href="project/yardswap.html">building</a> · <a href="project/yardswap-aborted.html">aborted</a> · <a href="project/yardswap-withdrawn.html">withdrawn</a></li>
+    <li><a href="project/recitalboard.html">recitalboard.ready</a></li>
+    <li><a href="unavailable.html">unavailable</a></li>
+    <li><a href="editor.html">editor.empty</a> · <a href="editor.html?draft=partial">6/9</a> · <a href="editor.html?draft=complete">9/9</a> · <a href="editor.html?draft=listed">listed-edit</a></li>
+    <li><a href="you.html">you.backed</a></li>
+    <li><a href="project/skydigest.html">skydigest.sketches-hosted</a> · <a href="project/kitledger.html">online-soon</a> · <a href="project/hosted-online.html">online</a> · <a href="project/routelantern.html">offline</a> · <a href="project/foghorn.html">hosting-ended</a></li>
+    <li>Owner strips: add <code>?owner=1</code>; optional <code>&amp;strip=checks|revise|rejected|listed|approved|reapprove|review-sketches|funded|building|failed|final|ready|extra|paused|closed|nudge|address|online|payout</code></li>
+    <li>A/B: <code>?primary=try|back</code> · safety chip test: <code>?chip=safety&amp;spec=1</code></li>
+    <li><a href="r1.html">R1 task</a></li>
+  </ul>
+</main>
+
+<footer class="footer"><a href="help.html">Help</a> · mock v2 · nothing charges a card</footer>
+<script src="js/mock.js?v=4"></script>
+
 </body>
 </html>

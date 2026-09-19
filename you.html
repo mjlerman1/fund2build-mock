@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You — Fund2Build</title>
+  <link rel="stylesheet" href="css/mock.css" />
+  
+</head>
+<body data-root="." data-screen="you.backed">
+<a class="skip" href="#main">Skip to content</a>
+<header class="pub">
+  <div class="pub-inner">
+    <nav aria-label="Primary">
+      <a class="logo" href="index.html">Fund<span>2</span>Build</a>
+    </nav>
+    <form class="search" action="search.html" role="search">
+      <input name="q" placeholder="Search personal software…" aria-label="Search personal software" />
+    </form>
+    <button class="search-toggle" type="button" data-search-toggle aria-expanded="false" aria-label="Search">🔍</button>
+    <div class="header-cta">
+      <a class="btn" href="editor.html" aria-label="Start a project">Start<span class="wide-only"> a project</span></a>
+      <a class="btn secondary" href="auth.html" data-signedout>Sign in</a>
+      <button class="avatar-btn" type="button" data-you-menu data-signedin aria-expanded="false" aria-haspopup="true" aria-label="You">You</button>
+    </div>
+    <div id="you-menu" class="you-menu" hidden data-signedin>
+      <a href="you.html">Backed</a>
+      <a href="you.html?tab=following">Following</a>
+      <a href="you.html?tab=projects">Your projects</a>
+      <a href="you.html?tab=notifications">Notifications</a>
+      <a href="you.html?tab=settings">Settings</a>
+      <a href="help.html">Help</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <h1 class="page-title">You</h1>
+  <div class="you-tabs" role="tablist" aria-label="You">
+    <a class="on" href="you.html" aria-pressed="true">Backed</a>
+    <a href="you.html?tab=following" aria-pressed="false">Following</a>
+    <a href="you.html?tab=projects" aria-pressed="false">Your projects</a>
+    <a href="you.html?tab=notifications" aria-pressed="false">Notifications</a>
+    <a href="you.html?tab=settings" aria-pressed="false">Settings</a>
+  </div>
+  <section aria-labelledby="h-backed">
+    <h2 id="h-backed">Backed</h2>
+    <article class="backed-row">
+      <h2>PantryLoop <span class="stage-word">Prototype</span></h2>
+      <p aria-label="PantryLoop $25 held for the build">$25 · held for the build</p>
+      <p><a class="btn accent" href="project/pantryloop.html#try">Try it</a> <a class="btn secondary" href="project/pantryloop.html#back">Back more</a></p>
+    </article>
+    <article class="backed-row">
+      <h2>YardSwap <span class="stage-word">Building</span></h2>
+      <p aria-label="YardSwap $40, $610 of $3,200 used">$40 · $610 of $3,200 used</p>
+      <p><a class="btn accent" href="project/yardswap.html">Follow</a></p>
+    </article>
+    <article class="backed-row">
+      <h2>RecitalBoard <span class="stage-word">Ready</span></h2>
+      <p aria-label="RecitalBoard $25">$25</p>
+      <p><a class="btn accent" href="apps/recitalboard.html">Use it</a></p>
+    </article>
+    <article class="backed-row">
+      <h2>SpokeRoster <span class="stage-word">Closed</span></h2>
+      <p aria-label="SpokeRoster $10 refunded 12 Sep 2026">$10 · refunded 12 Sep 2026</p>
+      <p><a class="btn accent" href="project/spokeroster-closed.html">View</a></p>
+    </article>
+    <article class="backed-row">
+      <h2>YardSwap <span class="stage-word">Closed</span></h2>
+      <p aria-label="YardSwap $40, $1,180 refunded 12 Sep 2026, what was built is public">$40 · $1,180 refunded 12 Sep 2026 · what was built is public</p>
+      <p><a class="btn accent" href="project/yardswap-aborted.html">View</a></p>
+    </article>
+    <article class="backed-row">
+      <h2>PantryLoop <span class="stage-word">Paused</span></h2>
+      <p aria-label="PantryLoop $25 held, backing paused while we review">$25 · held · backing paused while we review</p>
+      <p><a class="btn accent" href="project/pantryloop-paused.html">Follow</a></p>
+    </article>
+  </section>
+  <section aria-labelledby="h-n">
+    <h2 id="h-n">Notifications</h2>
+    <ul>
+      <li>YardSwap is funded. The build starts automatically. · <time datetime="2026-09-17">2d</time></li>
+      <li>YardSwap started building. · <time datetime="2026-09-17">2d</time></li>
+      <li>RecitalBoard is ready. Use it. · <time datetime="2026-09-10">9d</time></li>
+      <li>SpokeRoster closed. $10 was refunded to you. · <time datetime="2026-09-12">7d</time></li>
+      <li>YardSwap's build stopped at its budget. $1,180 was refunded to you.</li>
+      <li>Backing on PantryLoop is paused while we review.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Following</h2>
+    <ul class="feed"><li>
+<article class="card" data-kind="oss" data-followed="1">
+  <div class="card-top">
+    <div class="thumb " aria-hidden="true">PANTR</div>
+    <div>
+      <h2><a href="project/pantryloop.html">PantryLoop</a></h2>
+    </div>
+    <div class="stage-word">Prototype</div>
+  </div>
+  <p class="tagline">Plans meals from what's already in the fridge.</p>
+  <p class="meta" data-safety-slot>Maya Chen · 41 backers · <button class="upvote" type="button" aria-pressed="false" aria-label="Upvote PantryLoop, 128 upvotes" title="Upvotes help ranking. Backing pays for the build.">▲ 128</button> </p>
+  <div class="bar-row">
+  <div class="bar " role="progressbar" aria-valuemin="0" aria-valuemax="3000" aria-valuenow="1920" aria-label="$1,920 of $3,000 toward the build"><span style="width:64%"></span></div>
+</div>
+<p class="bar-label">$1,920 of $3,000</p>
+  <div class="card-acts" data-primary-swap><a class="btn accent" href="project/pantryloop.html#back">Back it</a><a class="btn secondary" href="project/pantryloop.html#try" data-act="try">Try it</a></div>
+</article>
+</li>
+<li>
+<article class="card" data-kind="oss" data-followed="1">
+  <div class="card-top">
+    <div class="thumb b" aria-hidden="true">YARDS</div>
+    <div>
+      <h2><a href="project/yardswap.html">YardSwap</a></h2>
+    </div>
+    <div class="stage-word">Building</div>
+  </div>
+  <p class="tagline">Neighborhood tool library with pickup slots and damage notes.</p>
+  <p class="meta">Omar Diallo · 118 backers · <button class="upvote" type="button" aria-pressed="false" aria-label="Upvote YardSwap, 86 upvotes" title="Upvotes help ranking. Backing pays for the build.">▲ 86</button> </p>
+  <p class="bar-label">Funded · build in progress</p>
+  <div class="card-acts"><a class="btn accent" href="project/yardswap.html">Follow</a></div>
+</article>
+</li>
+</ul>
+  </section>
+  <section>
+    <h2>Your projects</h2>
+    <article class="backed-row">
+      <h2>SpokeRoster <span class="stage-word">Idea</span></h2>
+      <p>Approve the build when you're ready.</p>
+      <p><a class="btn" href="project/spokeroster.html?owner=1">Open</a></p>
+    </article>
+    <article class="backed-row">
+      <h2>Draft · New project</h2>
+      <p>Ready to publish 6/9</p>
+      <p><a class="btn" href="editor.html?draft=partial">Edit</a></p>
+    </article>
+  </section>
+  <section>
+    <h2>Settings</h2>
+    <p>Display name · Maya Chen (mock)</p>
+    <p>Notifications · in-app on</p>
+  </section>
+</main>
+
+<footer class="footer"><a href="help.html">Help</a> · mock v2 · nothing charges a card</footer>
+<script src="js/mock.js?v=4"></script>
+
+</body>
+</html>
