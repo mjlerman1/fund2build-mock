@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Choose a path — Studio</title>
+  <link rel="stylesheet" href="../css/mock.css" />
+</head>
+<body class="studio-bg" data-root=".." data-screen="S-Studio-Path">
+  <header class="stu">
+    <div class="stu-inner">
+      <a class="logo" href="index.html">Studio</a>
+      <nav class="tabs">
+        <a href="index.html">Home</a>
+        <a href="examples.html">Examples</a>
+        <a href="drafts.html">Drafts</a>
+        <a href="pipeline.html">Pipeline</a>
+        <a href="maintain.html">Live</a>
+      </nav>
+      <a class="exit" href="../index.html">Exit to discovery</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="kicker">S-Studio-Path · comparison mock · not a frozen v1 split</p>
+    <h1 class="page-title">What are backers paying to create?</h1>
+    <p class="lede">Two listing types so we can feel the UX. Pick one and walk the wizard + a public pledge page.</p>
+    <div class="choice-grid">
+      <a class="choice" href="wizard.html">
+        <p class="kicker">Open source</p>
+        <h2>Public good</h2>
+        <p>Pledges pay the factory. After ship, <strong>anyone</strong> can use, fork, or self-host. No perks. If it needs an API, users bring their own keys.</p>
+      </a>
+      <a class="choice" href="wizard-hosted.html">
+        <p class="kicker">Hosted / paid</p>
+        <h2>Crowdfund a service</h2>
+        <p>You set backer tiers (a year free, a discount). Non-backers may pay later. Source might stay private. Ongoing host/inference is part of the listing.</p>
+      </a>
+    </div>
+    <p class="lede" style="margin-top:1.2rem">Then compare pledging: <a href="../project/pledge.html">PantryLoop (OSS)</a> vs <a href="../project/pledge-sky.html">SkyDigest (hosted)</a>.</p>
+  </main>
+  <script src="../js/mock.js"></script>
+  <script>
+    if (!F2B.seenExamples()) location.replace("examples.html?next=path.html");
+  </script>
+</body>
+</html>

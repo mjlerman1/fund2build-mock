@@ -187,6 +187,35 @@ header.stu .logo span { color: #5eead4; }
 .chip.warn { background: #fef3c7; color: var(--warn); }
 .chip.bad { background: #fee2e2; color: var(--bad); }
 .chip.goal { background: #ffedd5; color: #c2410c; }
+.chip.paid { background: #ede9fe; color: #5b21b6; }
+.choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.choice {
+  display: block;
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  padding: 1.2rem 1.25rem;
+  color: inherit;
+}
+.choice:hover { border-color: var(--accent); color: inherit; }
+.choice h2 { margin: 0 0 0.45rem; font-size: 1.15rem; }
+.choice p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.tier {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  margin: 0 0 0.65rem;
+}
+.tier:hover, .tier:focus-within { border-color: var(--accent-2); }
+.tier strong { display: block; font-size: 1.05rem; }
+.tier .price { font-weight: 800; color: var(--ink); }
+@media (max-width: 800px) {
+  .choice-grid { grid-template-columns: 1fr; }
+}
 .card-acts { display: flex; flex-direction: column; gap: 0.35rem; align-items: stretch; min-width: 9.5rem; }
 .upvote {
   border: 1px solid var(--line);
