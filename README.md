@@ -1,6 +1,6 @@
-# Fund2Build clickable HTML mock (v2)
+# Fund2Build clickable HTML mock (v3)
 
-Static spec demo of the redesigned experience (**D74–D78**). Not a production app: **no payments**, **no auth**, **no Cursor SDK**.
+Static spec demo — **Clubhouse Bulletin** skin (**D79**) and walkthrough-grade M3 OSS hops (**D80**). Not a production app: **no payments**, **no auth**, **no Cursor SDK**.
 
 ## Open locally
 

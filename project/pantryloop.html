@@ -47,16 +47,18 @@
   <div class="layout-proj">
     <div>
       <header class="proj-head">
-        <h1>PantryLoop <span class="stage-word" id="stage">Prototype</span></h1>
+        <h1>PantryLoop <span class="kind-chip oss">Open source</span> <span class="stage-word" id="stage">Prototype</span></h1>
         <p class="what-line">Plans meals from what's already in the fridge.</p>
         <p class="maker-line">Maya Chen · first project</p>
         <div class="bar-row">
-  <div class="bar " role="progressbar" aria-valuemin="0" aria-valuemax="3000" aria-valuenow="1920" aria-label="$1,920 of $3,000 toward the build"><span style="width:64%"></span></div>
+  <div class="bar " role="progressbar" data-live-bar aria-valuemin="0" aria-valuemax="3000" aria-valuenow="1920" aria-label="$1,920 of $3,000 toward the build"><span style="width:64%"></span></div>
 </div>
-<p>$1,920 of $3,000 · 41 backers · incl. $200 from the maker</p>
+<p class="goal-by">Goal by 19 Oct 2026</p>
+<p>$1,920 of $3,000 · <span data-backer-count="41">41 backers</span> · incl. $200 from the maker</p>
         <div class="ticks"><span class="done">Sketches ✓</span><span class="done">Prototype ✓</span><span>Build</span></div>
-        
-        <div class="proj-actions" data-primary-swap><a class="btn accent" href="#back" data-open-sheet="back-sheet" data-act="back">Back it</a> <a class="btn secondary" href="#try" data-act="try">Try it</a> <button class="btn secondary" type="button">Share</button> <a href="#details">Details ▾</a> <button class="upvote" type="button" aria-pressed="false" aria-label="Upvote PantryLoop, 128 upvotes" title="Upvotes help ranking. Backing pays for the build.">▲ 128</button></div>
+        <div class="ladder" role="group" aria-label="Funding steps"><div class="ladder-step done"><b>Sketches</b>done</div><div class="ladder-step done"><b>Prototype</b>done</div><div class="ladder-step now"><b>Build</b>$1,080 to go of $3,000</div></div>
+        <p class="tour-extra"><a href="pantryloop-over.html">Past 100% — extra money never buys a bigger build</a></p>
+        <div class="proj-actions" data-primary-swap><a class="btn accent" href="#back" data-open-sheet="back-sheet" data-act="back">Back it</a> <a class="btn secondary" href="#try" data-act="try">Try it</a> <button class="btn secondary" type="button" data-follow-project="PantryLoop">Follow</button> <button class="btn secondary" type="button">Share</button> <a href="#details">Details ▾</a> <button class="upvote" type="button" aria-pressed="false" aria-label="Upvote PantryLoop, 128 upvotes" title="Upvotes help ranking. Backing pays for the build.">▲ 128</button></div>
       </header>
       <div class="three" id="money">
   <dl>
@@ -103,9 +105,9 @@
     </div>
     <aside class="rail">
       <div class="bar-row">
-  <div class="bar " role="progressbar" aria-valuemin="0" aria-valuemax="3000" aria-valuenow="1920" aria-label="$1,920 of $3,000 toward the build"><span style="width:64%"></span></div>
+  <div class="bar " role="progressbar" data-live-bar aria-valuemin="0" aria-valuemax="3000" aria-valuenow="1920" aria-label="$1,920 of $3,000 toward the build"><span style="width:64%"></span></div>
 </div>
-<p>$1,920 of $3,000 · 41 backers · incl. $200 from the maker</p>
+<p>$1,920 of $3,000 · <span data-backer-count="41">41 backers</span> · incl. $200 from the maker</p>
       <div class="ticks"><span class="done">Sketches ✓</span><span class="done">Prototype ✓</span><span>Build</span></div>
       <div class="proj-actions" data-primary-swap><a class="btn accent" href="#back" data-open-sheet="back-sheet" data-act="back">Back it</a> <a class="btn secondary" href="#try" data-act="try">Try it</a> <button class="btn secondary" type="button">Share</button> <a href="#details">Details ▾</a> <button class="upvote" type="button" aria-pressed="false" aria-label="Upvote PantryLoop, 128 upvotes" title="Upvotes help ranking. Backing pays for the build.">▲ 128</button></div>
       <p>Maya Chen · first project</p>
@@ -114,7 +116,7 @@
 </main>
 </div>
 <div id="sheet-backdrop" class="sheet-backdrop" hidden></div>
-<div id="back-sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden data-title="PantryLoop" data-receipt="Your $25 is held for the build.">
+<div id="back-sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden data-title="PantryLoop" data-receipt="Your $25 is held for the build." data-owner-backing="1">
   <div class="sheet-head">
     <h2 id="sheet-title">Back PantryLoop</h2>
     <button type="button" data-close-sheet aria-label="Close">✕</button>
@@ -140,23 +142,30 @@
 </div>
 
     
-    <ul>
-    <li>Your <span data-amt>$25</span> is held for the build.</li>
-        <li>Steps that get made stay public even if it stops.</li>
+    <p class="pledge-one">Your <span data-amt>$25</span> is held for the build.</p>
+    <p class="maker-label" data-signedin>If you are the maker, this amount is labelled on the bar as from the maker.</p>
+<details><summary>How money works</summary>
+<ul class="extra-bullets"><li>Steps that get made stay public even if it stops.</li>
     <li>Money for steps that never happen is refunded.</li>
-    <li>Extra money never buys a bigger build.</li>
+    <li>Extra money never buys a bigger build. <a href="pantryloop-over.html">See a tour past 100%</a>.</li></ul>
+<p>We check every idea for safety before it's listed and again before it\'s released. If our build breaks, we fix it at our cost.</p>
+</details>
+    
+    <div class="pay-auth" data-signedout>
+      <p data-pay-hint hidden>Sign in is folded into Pay — email is enough in this mock.</p>
+      <label>Email <input type="email" data-pay-email placeholder="you@example.com" aria-label="Email to sign in and pay" /></label>
+    </div>
 
-    </ul>
-    <button class="btn accent pay" type="button" data-pay>Pay $25</button>
-    <details><summary>Where the money goes</summary>
-      <p>We check every idea for safety before it's listed and again before it's released. If our build breaks, we fix it at our cost. Extra money never buys a bigger build.</p>
-    </details>
+    
+<button class="btn accent pay" type="button" data-pay>Pay $25</button>
+    <p><button class="btn secondary" type="button" data-pay="fail">If payment didn't go through</button></p>
+    
   </div>
 </div>
 
 
-<footer class="footer"><a href="../help.html">Help</a> · mock v2 · nothing charges a card</footer>
-<script src="../js/mock.js?v=4"></script>
+<footer class="footer"><a href="../help.html">Help</a> · mock v3 · nothing charges a card</footer>
+<script src="../js/mock.js?v=8"></script>
 
 </body>
 </html>

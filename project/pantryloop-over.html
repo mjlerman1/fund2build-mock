@@ -47,7 +47,7 @@
   <div class="layout-proj">
     <div>
       <header class="proj-head">
-        <h1>PantryLoop <span class="stage-word" id="stage">Prototype</span></h1>
+        <h1>PantryLoop <span class="kind-chip oss">Open source</span> <span class="stage-word" id="stage">Prototype</span></h1>
         <p class="what-line">Plans meals from what's already in the fridge.</p>
         <p class="maker-line">Maya Chen · first project</p>
         <div class="bar-row">
@@ -55,7 +55,7 @@
 </div>
 <p>$3,120 of $3,000 · 41 backers · goal reached · incl. $200 from the maker</p>
         <div class="ticks"><span class="done">Sketches ✓</span><span class="done">Prototype ✓</span><span>Build</span></div>
-        
+        <div class="ladder" role="group" aria-label="Funding steps"><div class="ladder-step done"><b>Sketches</b>done</div><div class="ladder-step done"><b>Prototype</b>done</div><div class="ladder-step now"><b>Build</b>$1,080 to go of $3,000</div></div>
         <div class="proj-actions" data-primary-swap><a class="btn accent" href="#back" data-open-sheet="back-sheet" data-act="back">Back it</a> <a class="btn secondary" href="#try" data-act="try">Try it</a> <button class="btn secondary" type="button">Share</button> <a href="#details">Details ▾</a> <button class="upvote" type="button" aria-pressed="false" aria-label="Upvote PantryLoop, 128 upvotes" title="Upvotes help ranking. Backing pays for the build.">▲ 128</button></div>
       </header>
       <div class="three" id="money">
@@ -140,23 +140,28 @@
 </div>
 
     
-    <ul>
-    <li>The goal is reached. Your <span data-amt>$25</span> is extra money; the maker chooses Keep or Save for updates.</li>
-        <li>Steps that get made stay public even if it stops.</li>
+    <p class="pledge-one">The goal is reached. Your <span data-amt>$25</span> is extra money; the maker chooses Keep or Save for updates.</p>
+<details><summary>How money works</summary>
+<ul class="extra-bullets"><li>Steps that get made stay public even if it stops.</li>
     <li>Money for steps that never happen is refunded.</li>
-    <li>Extra money never buys a bigger build.</li>
+    <li>Extra money never buys a bigger build.</li></ul>
+<p>We check every idea for safety before it's listed and again before it\'s released. If our build breaks, we fix it at our cost.</p>
+</details>
+    
+    <div class="pay-auth" data-signedout>
+      <p data-pay-hint hidden>Sign in is folded into Pay — email is enough in this mock.</p>
+      <label>Email <input type="email" data-pay-email placeholder="you@example.com" aria-label="Email to sign in and pay" /></label>
+    </div>
 
-    </ul>
-    <button class="btn accent pay" type="button" data-pay>Pay $25</button>
-    <details><summary>Where the money goes</summary>
-      <p>We check every idea for safety before it's listed and again before it's released. If our build breaks, we fix it at our cost. Extra money never buys a bigger build.</p>
-    </details>
+    
+<button class="btn accent pay" type="button" data-pay>Pay $25</button>
+    
   </div>
 </div>
 
 
-<footer class="footer"><a href="../help.html">Help</a> · mock v2 · nothing charges a card</footer>
-<script src="../js/mock.js?v=4"></script>
+<footer class="footer"><a href="../help.html">Help</a> · mock v3 · nothing charges a card</footer>
+<script src="../js/mock.js?v=8"></script>
 
 </body>
 </html>
